@@ -1,0 +1,83 @@
+# CMakeList.txt: проект CMake для My_test включите исходный код и определения,
+# укажите здесь логику для конкретного проекта.
+#
+
+add_executable(My_tests 
+	"IoCConnecContainerCommandTest.cpp"	
+	"IoCExceptionTest.cpp"
+	"FunctorTest.cpp"
+	"ScopeTest.cpp"
+	"IoCRegisterCommandTest.cpp"
+	"IoCScopeNewCommandTest.cpp"
+	"IoCChangeCurrentScopeCommand.cpp"
+	"IoCScopeDeleteCommandTest.cpp"
+	"IoCTest.cpp"
+	"ScopeTreeTest.cpp"
+ )
+
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+set_property(TARGET My_tests PROPERTY CXX_STANDARD 20)
+endif()
+
+# TODO: Добавьте тесты и целевые объекты, если это необходимо.
+# Включите подпроекты.
+enable_testing()
+
+IF (WIN32)
+  # set stuff for windows
+  set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+ENDIF()
+
+add_subdirectory(googletest)
+
+target_link_libraries(My_tests PUBLIC
+	gtest_main
+	gmock_main
+	SpaceBattle
+)
+
+
+
+add_test(
+	NAME "IoCConnecContainerCommandTest.cpp"
+	COMMAND "IoCConnecContainerCommandTest.cpp"
+)
+add_test(
+	NAME "IoCExceptionTest.cpp"
+	COMMAND "IoCExceptionTest.cpp"
+)
+add_test(
+	NAME "FunctorTest.cpp"
+	COMMAND "FunctorTest.cpp"
+)
+add_test(
+	NAME "ScopeTest.cpp"
+	COMMAND "ScopeTest.cpp"
+)
+add_test(
+	NAME "IoCRegisterCommandTest.cpp"
+	COMMAND "IoCRegisterCommandTest.cpp"
+)
+add_test(
+	NAME "IoCScopeNewCommandTest.cpp"
+	COMMAND "IoCScopeNewCommandTest.cpp"
+)
+add_test(
+	NAME "IoCChangeCurrentScopeCommand.cpp"
+	COMMAND "IoCChangeCurrentScopeCommand.cpp"
+)
+add_test(
+	NAME "IoCScopeDeleteCommandTest.cpp"
+	COMMAND "IoCScopeDeleteCommandTest.cpp"
+)
+add_test(
+	NAME "IoCTest.cpp"
+	COMMAND "IoCTest.cpp"
+)
+add_test(
+	NAME "ScopeTreeTest.cpp"
+	COMMAND "ScopeTreeTest.cpp"
+)
+
+
+
