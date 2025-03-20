@@ -36,47 +36,9 @@ target_link_libraries(My_tests PUBLIC
 	SpaceBattle
 )
 
-
-
 add_test(
-	NAME "IoCConnecContainerCommandTest.cpp"
-	COMMAND "IoCConnecContainerCommandTest.cpp"
-)
-add_test(
-	NAME "IoCExceptionTest.cpp"
-	COMMAND "IoCExceptionTest.cpp"
-)
-add_test(
-	NAME "FunctorTest.cpp"
-	COMMAND "FunctorTest.cpp"
-)
-add_test(
-	NAME "ScopeTest.cpp"
-	COMMAND "ScopeTest.cpp"
-)
-add_test(
-	NAME "IoCRegisterCommandTest.cpp"
-	COMMAND "IoCRegisterCommandTest.cpp"
-)
-add_test(
-	NAME "IoCScopeNewCommandTest.cpp"
-	COMMAND "IoCScopeNewCommandTest.cpp"
-)
-add_test(
-	NAME "IoCChangeCurrentScopeCommand.cpp"
-	COMMAND "IoCChangeCurrentScopeCommand.cpp"
-)
-add_test(
-	NAME "IoCScopeDeleteCommandTest.cpp"
-	COMMAND "IoCScopeDeleteCommandTest.cpp"
-)
-add_test(
-	NAME "IoCTest.cpp"
-	COMMAND "IoCTest.cpp"
-)
-add_test(
-	NAME "ScopeTreeTest.cpp"
-	COMMAND "ScopeTreeTest.cpp"
+	NAME My_tests
+	COMMAND My_tests
 )
 
 

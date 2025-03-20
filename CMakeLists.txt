@@ -13,7 +13,7 @@ project ("Homework_5")
 
 # Включите подпроекты.
 add_subdirectory (SpaceBattle)
-add_subdirectory (Tests)
+add_subdirectory (Test)
 
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable(Main main.cpp)
