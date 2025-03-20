@@ -15,20 +15,3 @@ project ("Homework_5")
 add_subdirectory (SpaceBattle)
 add_subdirectory (Tests)
 
-# Добавьте источник в исполняемый файл этого проекта.
-add_executable(Main main.cpp)
-
-target_link_libraries(Main PRIVATE
-	SpaceBattle
-)
-
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET Main PROPERTY CXX_STANDARD 20)
-endif()
-
-
-
-
-
-
-# TODO: Добавьте тесты и целевые объекты, если это необходимо.
